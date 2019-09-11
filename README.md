@@ -1,6 +1,6 @@
 # BankApplication
-
-- IDE: Eclipse, 
+- Technology Used: Servlet, JSP, HTML, CSS, JavaScript
+- IDE: Eclipse 
 - Database: Oracle (Ojdbc14.jar) 
 - Server: Tomcat (v9)
 
