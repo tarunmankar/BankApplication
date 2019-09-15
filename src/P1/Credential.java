@@ -16,19 +16,20 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class Credential extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 	private HttpSession session;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String email=request.getParameter("email");
+		String email=request.getParameter("email");	
 		session=request.getSession(true);
 		session.setAttribute("email", email);
 		
-		final String fromEmail="MailDetails.getEmail"; //sender's mail id.
-		final String pwd="MailDetails.getPassword";		//sender's mail pwd.
-		String toEmail="tharkeshthark@gmail.com";  //reciever's mail id.
+		final String fromEmail="demo.mail@gmail.com"; //sender's mail id.
+		final String pwd="demo1234";		//sender's mail pwd.
+		String toEmail=email;  //reciever's mail id.
 		
 		String subject="DO NOT REPLY: Mail from Java Program"; // mail subject line
-		String msg="Hi, How are you?"; //mail body
+		String msg="Click here to change password http://localhost:8070/BankApp/ChangeNPwd.html"; //mail body
 		
 		//Creating Session Object
 		Properties prop = new Properties();
